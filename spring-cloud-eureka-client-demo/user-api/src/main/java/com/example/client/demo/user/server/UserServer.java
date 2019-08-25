@@ -1,6 +1,8 @@
 package com.example.client.demo.user.server;
 
 import com.example.client.demo.user.domain.User;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Collection;
 
@@ -12,7 +14,8 @@ import java.util.Collection;
  */
 public interface UserServer {
 
-    Boolean save(User user);
+
+    Boolean save(@RequestBody  User user);
 
 
     Collection<User> findAll();
